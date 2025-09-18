@@ -1,0 +1,21 @@
+<div class="flex justify-between items-center p-4 border border-gray-300 rounded-xl {{if @task.isDone 'bg-gray-100'}}">
+  <div>
+    <p class="text-lg font-bold {{if @task.isDone 'line-through text-gray-500' 'text-gray-800'}}">
+      {{@task.title}}
+    </p>
+    <p class="text-sm {{if @task.isDone 'line-through text-gray-400' 'text-gray-500'}}">
+      {{@task.description}}
+    </p>
+  </div>
+
+  <div class="flex gap-2">
+    {{!-- template-lint-disable require-input-label --}}
+    <input onchange={{this.toggleCompletion}} type="checkbox" checked={{@task.isDone}} class="mr-2" />
+    <button 
+      type="button" 
+      class="px-2 py-1 bg-red-500 text-white rounded-xl hover:bg-red-600"
+      onclick={{this.deleteTask}}>
+      Delete
+    </button>
+  </div>
+</div>

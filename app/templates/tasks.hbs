@@ -1,0 +1,24 @@
+{{page-title "Tasks"}}
+<div class="m-10">
+  <div class="w-full text-center">
+    <h1 class="text-3xl font-bold">Welcome To Your Task Board!</h1>
+  </div>
+  <div class="flex gap-2 mt-5 w-1/2 justify-center mx-auto">
+    <input id="search-tasks" type="text" placeholder="Search tasks..."
+      onchange={{this.setSearchQuery}} value={{this.searchQuery}}
+      class="p-1 border border-gray-300 rounded-xl w-1/2" />
+    <button 
+      type="button"
+      class="px-3 py-1 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700"
+      {{on "click" (fn this.setAddTaskOpen true)}}
+      >Add Task</button>
+  </div>
+  <div class="mx-auto mt-10 w-1/2 flex flex-col gap-4">
+    {{#each this.model as |task|}}
+    <TaskItem @task={{task}} />
+    {{/each}}
+  </div>
+  {{#if this.isAddTaskOpen}}
+  <CreateTask @onCancel={{fn this.setAddTaskOpen false}}/>
+  {{/if}}
+</div>
