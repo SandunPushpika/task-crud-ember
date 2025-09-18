@@ -1,7 +1,6 @@
-# ember-app
+# Task-App
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a simple CRUD application that was built for demonstrating and enhancing EmberJs skills.
 
 ## Prerequisites
 
@@ -47,10 +46,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 Specify what it takes to deploy your app.
 
-## Further Reading / Useful Links
+## UI
 
-- [ember.js](https://emberjs.com/)
-- [ember-cli](https://cli.emberjs.com/release/)
-- Development Browser Extensions
-  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+<img width="1470" height="877" alt="image" src="https://github.com/user-attachments/assets/12ed0cfd-f40d-4f6c-b293-ed234967df78" />
+
+
